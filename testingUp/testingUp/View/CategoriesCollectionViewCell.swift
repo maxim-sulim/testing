@@ -43,6 +43,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
                         let image = UIImage(data: data)
                         self.categoryImage.image = image?.scale(newWidth: 352)
                         self.categoryImage.layer.cornerRadius = 20
+                        self.categoryImage.contentMode = .scaleToFill
                         
                         self.categoryLable.text = element.name
                         

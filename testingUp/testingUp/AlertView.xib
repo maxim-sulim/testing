@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-WI-qUK">
+                    <rect key="frame" x="25" y="203" width="343" height="446"/>
+                    <color key="backgroundColor" red="0.96099999999999997" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="446" id="2uK-Wv-B41"/>
+                        <constraint firstAttribute="width" constant="343" id="YyJ-qB-Mi4"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fiH-hT-WVy">
+                    <rect key="frame" x="41" y="219" width="311" height="232"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название блюда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyn-pE-oD6">
+                    <rect key="frame" x="41" y="459" width="187" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="цена (.) грамм" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-b1-bcH">
+                    <rect key="frame" x="41" y="484" width="78" height="15"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание блюда на много строк " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abi-Vk-wDq">
+                    <rect key="frame" x="41" y="507" width="311" height="62"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfq-c9-iwj" customClass="BascketButton" customModule="testingUp" customModuleProvider="target">
+                    <rect key="frame" x="41" y="585" width="311" height="48"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Добавить в корзину"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fiH-hT-WVy" firstAttribute="trailing" secondItem="hXR-WI-qUK" secondAttribute="trailing" constant="-16" id="3tm-gn-RZL"/>
+                <constraint firstItem="hXR-WI-qUK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="57T-1m-URG"/>
+                <constraint firstItem="fiH-hT-WVy" firstAttribute="leading" secondItem="hXR-WI-qUK" secondAttribute="leading" constant="16" id="9aj-jb-eee"/>
+                <constraint firstItem="Abi-Vk-wDq" firstAttribute="trailing" secondItem="hXR-WI-qUK" secondAttribute="trailing" constant="-16" id="HhA-io-vdT"/>
+                <constraint firstItem="Abi-Vk-wDq" firstAttribute="leading" secondItem="hXR-WI-qUK" secondAttribute="leading" constant="16" id="Iph-2c-GUk"/>
+                <constraint firstItem="Abi-Vk-wDq" firstAttribute="top" secondItem="hXR-WI-qUK" secondAttribute="top" constant="304" id="J0h-uD-rsh"/>
+                <constraint firstItem="Wfq-c9-iwj" firstAttribute="top" secondItem="hXR-WI-qUK" secondAttribute="top" constant="382" id="Kh7-Ht-x41"/>
+                <constraint firstItem="fiH-hT-WVy" firstAttribute="bottom" secondItem="hXR-WI-qUK" secondAttribute="bottom" constant="-198" id="O5d-Lb-GhR"/>
+                <constraint firstItem="Kyn-pE-oD6" firstAttribute="trailing" secondItem="hXR-WI-qUK" secondAttribute="trailing" constant="-140" id="S8J-tP-5JY"/>
+                <constraint firstItem="Wfq-c9-iwj" firstAttribute="trailing" secondItem="hXR-WI-qUK" secondAttribute="trailing" constant="-16" id="UMs-eK-Ges"/>
+                <constraint firstItem="Kyn-pE-oD6" firstAttribute="leading" secondItem="hXR-WI-qUK" secondAttribute="leading" constant="16" id="UYJ-S3-wMx"/>
+                <constraint firstItem="fiH-hT-WVy" firstAttribute="top" secondItem="hXR-WI-qUK" secondAttribute="top" constant="16" id="WA4-ht-tYF"/>
+                <constraint firstItem="OVP-b1-bcH" firstAttribute="top" secondItem="hXR-WI-qUK" secondAttribute="top" constant="281" id="WxW-kQ-bf0"/>
+                <constraint firstItem="Kyn-pE-oD6" firstAttribute="top" secondItem="hXR-WI-qUK" secondAttribute="top" constant="256" id="XQ2-BG-tkM"/>
+                <constraint firstItem="Wfq-c9-iwj" firstAttribute="leading" secondItem="hXR-WI-qUK" secondAttribute="leading" constant="16" id="bnW-wW-2ii"/>
+                <constraint firstItem="Abi-Vk-wDq" firstAttribute="bottom" secondItem="hXR-WI-qUK" secondAttribute="bottom" constant="-80" id="eI3-WA-vQz"/>
+                <constraint firstItem="OVP-b1-bcH" firstAttribute="leading" secondItem="hXR-WI-qUK" secondAttribute="leading" constant="16" id="eM1-Nd-dZe"/>
+                <constraint firstItem="hXR-WI-qUK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gkF-Kc-1uG"/>
+                <constraint firstItem="Kyn-pE-oD6" firstAttribute="bottom" secondItem="hXR-WI-qUK" secondAttribute="bottom" constant="-173" id="lRp-rN-wwn"/>
+                <constraint firstItem="Wfq-c9-iwj" firstAttribute="bottom" secondItem="hXR-WI-qUK" secondAttribute="bottom" constant="-16" id="rg0-uS-bmK"/>
+                <constraint firstItem="OVP-b1-bcH" firstAttribute="bottom" secondItem="hXR-WI-qUK" secondAttribute="bottom" constant="-150" id="sz6-OS-JVB"/>
+                <constraint firstItem="OVP-b1-bcH" firstAttribute="trailing" secondItem="hXR-WI-qUK" secondAttribute="trailing" constant="-249" id="tAg-R5-x6l"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="27" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Wfq-c9-iwj">
+            <size key="intrinsicContentSize" width="183.33333333333334" height="34.333333333333336"/>
+        </designable>
+    </designables>
+</document>

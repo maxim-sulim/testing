@@ -7,8 +7,20 @@
 
 import Foundation
 
+protocol TagsProtocol {
+    var name: String { get set }
+    var isSelected: Bool { get set }
+}
 
-enum TegsDish {
+
+struct Tags: TagsProtocol {
+    var name: String
+    
+    var isSelected: Bool
+    
+}
+
+enum NameTagsDish {
     static var all = "Все меню"
     static var rice = "С рисом"
     static var salads = "Салаты"

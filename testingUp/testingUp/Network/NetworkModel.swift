@@ -34,12 +34,12 @@ struct ResultsDishes: Codable {
 
 // MARK: - Dish
 struct Dish: Codable {
-    let id: Int
+    let id: Int?
     let name: String
     let price, weight: Int
-    let description: String
+    let description: String?
     let imageURL: String
-    let tegs: [String]
+    let tegs: [String]?
 
     enum CodingKeys: String, CodingKey {
         case id, name, price, weight, description

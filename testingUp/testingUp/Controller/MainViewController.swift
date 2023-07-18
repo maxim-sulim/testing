@@ -15,7 +15,7 @@ protocol CategoryShow: AnyObject {
 class MainViewController: UIViewController, CategoryShow {
 
     var dataCategories = [Сategory]()
-    
+    private var storage: UserStorageProtocol = UserStorage()
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -25,8 +25,12 @@ class MainViewController: UIViewController, CategoryShow {
         loadCategories()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        configureBarItem()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureBarItem()
     }
 
     private func loadCategories() {
@@ -51,12 +55,12 @@ class MainViewController: UIViewController, CategoryShow {
     }
     
     private func configureBarItem() {
+        let user = storage.loadAccount()
         if let barItem = navigationController?.navigationBar.topItem {
-            let imageProgile = UIImage(named: "Unknown")
-            barItem.leftBarButtonItem?.title = "Санкт-Петербург"
+            barItem.leftBarButtonItem?.title = user.location
 
             barItem.leftBarButtonItem?.tintColor = .black
-            barItem.leftBarButtonItem?.image = imageProgile
+            
         }
     }
     
@@ -66,6 +70,11 @@ class MainViewController: UIViewController, CategoryShow {
             return
         }
         vcDish.nameCategory = name
+        if vcDish.nameCategory == "Азиатская кухня" {
+            vcDish.loadDishes(nameCategory: name)
+        } else {
+            vcDish.loadDishes(nameCategory: "all")
+        }
         vcDish.modalPresentationStyle = .fullScreen
         vcDish.modalTransitionStyle = .crossDissolve
         show(vcDish, sender: true)
